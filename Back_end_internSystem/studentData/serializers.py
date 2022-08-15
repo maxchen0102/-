@@ -8,3 +8,4 @@ class DataSerializer(serializers.ModelSerializer):
         model = Data
         # fields = '__all__'
         fields = ('id', 'name', 'email', 'phone') ## 定義你的資料流
+
