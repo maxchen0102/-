@@ -15,9 +15,11 @@ const routes: Routes = [
     path:"article",
     component:ArticleComponent
   },
+
   {
     path:"fillPage",
-    component:FillPageComponent
+    component:FillPageComponent,
+
   },
   {
     path:"login",
