@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
-import { TestComponent } from './test/test.component';
+
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 @NgModule({
@@ -17,7 +17,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     ArticleComponent, // This is for selector tag  working
 
     BannerComponent,
-    TestComponent,
+
     NotFoundPageComponent,
     AppComponent,
 

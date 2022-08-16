@@ -1,3 +1,4 @@
+import { FillPageModule } from './fill-page/fill-page.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -22,7 +23,8 @@ import { BannerComponent } from './banner/banner.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FillPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

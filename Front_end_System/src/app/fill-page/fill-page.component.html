@@ -1,2 +1,92 @@
 <app-nav-bar></app-nav-bar>
 <app-banner></app-banner>
+
+
+  <!--輸入區塊-->
+  <div class="row">
+
+    <div class="col-5">
+      <p></p>
+      <h3><b>新增學生</b></h3>
+      <form>
+
+        <div class="mb-3 row">
+          <label for="inputname" class="col-sm-2 col-form-label">姓名</label>
+          <div class="col-sm-10">
+            <input autofocus  placeholder="輸入姓名" type="text" name="name" class="form-control" id="inputname" [(ngModel)]="name" >
+          </div>
+        </div>
+        <p></p>
+        <div class="mb-3 row">
+          <label for="inputemail" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input  type="text" placeholder="輸入Email" name="email" class="form-control" id="inputemial" [(ngModel)]="email" >
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="inputnumber" class="col-sm-2 col-form-label">輸入電話</label>
+          <div class="col-sm-10">
+            <input  type="text" placeholder="輸入電話號碼" name="phone" class="form-control" id="inputnumber" [(ngModel)]="phone" >
+          </div>
+        </div>
+
+        <p></p>
+
+        <button
+          tyep="button"
+          (click)="editData(name, email, phone)"
+          class="btn btn-outline-danger"
+        >
+          新增修改
+        </button>
+        <button
+          type="submit"
+          class="btn btn btn-outline-success"
+          (click)="insertData(name, email, phone)"
+        >
+          新增
+        </button>
+
+
+      </form>
+    </div>
+    <div class="col-7">
+      <p></p>
+      <h3><b>學生列表</b></h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">順序</th>
+            <th scope="col">姓名</th>
+            <th scope="col">電子郵件</th>
+            <th scope="col">電話號碼</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let data of lists; let i = index">
+            <tr>
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ data.name }}</td>
+              <td>{{ data.email }}</td>
+              <td>{{ data.phone }}</td>
+              <button
+                class="btn btn-outline-dark"
+                (click)="showData(data.id, data.name, data.email, data.phone)"
+              >
+                編輯
+              </button>
+
+              <!--點擊表單會觸發button 就會回傳當前點擊的id== 簡簡單單 -->
+              <button
+                class="btn btn-warning"
+                (click)="deleteData(data.id)"
+              >
+                刪除
+              </button>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>

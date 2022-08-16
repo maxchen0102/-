@@ -1,5 +1,5 @@
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
-import { TestComponent } from './test/test.component';
+
 import { ArticleComponent } from './article/article.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
@@ -7,14 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
 
-{
-path:"test",
-component:TestComponent
-},
-{
-  path: '',
-  component:TestComponent
-},
+
 {
 path:"article",
 component:ArticleComponent
