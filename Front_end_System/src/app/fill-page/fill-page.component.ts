@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fill-page.component.css']
 })
 export class FillPageComponent implements OnInit {
-
+//定義一個appServie物件 其型態是我們fillpageService型態
   constructor(private appService: FillPageService) { }
   lists: any;
   name = '';
