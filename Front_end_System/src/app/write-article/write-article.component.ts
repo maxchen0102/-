@@ -120,6 +120,7 @@ export class WriteArticleComponent implements OnInit {
     console.log(this.article);
 
 
+
     this.appService
     .insertArticle({
       Original_id: this.selectedOptions,
