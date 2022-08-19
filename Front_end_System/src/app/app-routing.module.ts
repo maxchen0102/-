@@ -1,3 +1,4 @@
+import { WriteArticleComponent } from './write-article/write-article.component';
 import { FillPageComponent } from './fill-page/fill-page.component';
 import { LoginComponent } from './login/login.component';
 import { ArticleComponent } from './article/article.component';
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path:"article",
     component:ArticleComponent
+  },
+  {
+    path :"writeArticle",
+    component:WriteArticleComponent
   },
 
   {
