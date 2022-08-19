@@ -23,18 +23,16 @@
         <div class="col-3">
           <p></p>
           <h4>選擇想觀看的學生姓名</h4>
-          <select
-            class="form-select form-select-lg mb-3"
-            aria-label=".form-select-lg example"
-          >
-            <option selected>學生姓名</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+
+          <select [(ngModel)]="selectedOptions" (ngModelChange)="onValueChanged($event)" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option [ngValue]="undefined" >請選擇您的姓名</option>
+            <option *ngFor="let data of lists" [ngValue]="data.id">{{data.name}}</option>
           </select>
 
           <P></P>
 
+
+          <!--使用的欄位-->
           <div>
             <h4>使用的技術與工具比例</h4>
             <h5>JAVA 10%</h5>
@@ -92,6 +90,8 @@
             <h3>6篇</h3>
           </div>
         </div>
+
+
         <div class="col-9">
           <div class="row g-3">
             <div class="col-4">
