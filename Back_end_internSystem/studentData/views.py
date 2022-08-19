@@ -13,4 +13,3 @@ class DataViewSet(viewsets.ModelViewSet):
     serializer_class = DataSerializer  # 引入我們序列化的class
 
 
-#

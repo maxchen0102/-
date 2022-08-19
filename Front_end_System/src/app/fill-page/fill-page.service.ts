@@ -21,9 +21,12 @@ export class FillPageService {
   public msgArray: any = [];
   public New_Data: any = '';
   constructor(private http: HttpClient) {
+    //******Subscribing to an observable is equivalent to adding an event listener*******
     this.http.get(this.mainURL).subscribe((res) => {});
 
-    //why ??
+    //why ?? options object that is used to configure the request.
+    // we define the content type must be json form
+    //https://angular.io/guide/http
     this.options = {
       headers: new HttpHeaders({
         'content-type': 'application/json',
@@ -48,13 +51,14 @@ export class FillPageService {
   insertData(request: dataModel) {
     return this.http.post(
       this.mainURL,
-      request,
+      request, // 我們給後端的request
       this.options
     );
   }
 
   //更新一筆資料
   //update 在component 呼叫的時候要有兩個傳值， 一個是datamodel型態的修改後資料 以及修改值id
+  // 你可以選擇要更改的api的網址 ，這邊選data ，後端會根據他router 到指定的function
   updateData(request: dataModel, id: number) {
     return this.http.put(`http://127.0.0.1:8000/api/data/${id}/`,request , this.options);
   }
