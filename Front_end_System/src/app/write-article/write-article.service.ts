@@ -15,6 +15,7 @@ import { articleModel } from './article_model';
 })
 export class WriteArticleService {
   mainURL = environment.apiURL;
+  minorURL=environment.articleURL
   options: any;
 
   private data_list: dataModel[] = [];
@@ -76,7 +77,7 @@ export class WriteArticleService {
   //8************************Article Part ****************************************
   insertArticle(request: articleModel) { // 參數就寫在interface了啊 就是articleModel
     return this.http.post(
-      `http://127.0.0.1:8000/apadi/`,
+      `http://127.0.0.1:8000/api/article2/`,
       request, // 我們給後端的request
       this.options
     );

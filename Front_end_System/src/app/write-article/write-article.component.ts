@@ -119,13 +119,14 @@ export class WriteArticleComponent implements OnInit {
 
     console.log(this.article);
 
-
-
     this.appService
     .insertArticle({
       Original_id: this.selectedOptions,
       article:this.article
-    })
+    }).subscribe((res) => {
+      this.getAllData();
+      this.reset();
+    });
 
     console.log('新增文章完成');
     this.article="";
