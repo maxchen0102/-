@@ -33,6 +33,7 @@ export class ArticleComponent implements OnInit {
     });
   }
 
+
   onValueChanged(passValue: any): void {
     this.selectedOptions = passValue;
 
