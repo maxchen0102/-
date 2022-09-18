@@ -17,20 +17,23 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include 
 from rest_framework.routers import DefaultRouter
-from studentData.views import DataViewSet,ArticleViewSet,Article2ViewSet
+from studentData.views import DataViewSet,Article2ViewSet
 
 router = DefaultRouter()
 router.register('data', DataViewSet)
-router.register('article', ArticleViewSet)
+
 router.register('article2', Article2ViewSet)
-
-
-
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include(router.urls) ),
 
+  
+    
+    
+
+    
+    
     ]
 

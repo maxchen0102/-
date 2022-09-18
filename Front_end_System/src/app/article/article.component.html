@@ -18,6 +18,7 @@
 
     </nav>
 
+    <!--------------------------- 側邊欄位開始---------------------------------------->
     <div class="container">
       <div class="row">
         <div class="col-3">
@@ -85,112 +86,38 @@
             </div>
           </div>
           <p></p>
+
+          <!--文章數量統計區塊-->
           <div>
             <h4>總共文章數量</h4>
-            <h3>6篇</h3>
+            <h3>{{article_number}}</h3>
           </div>
+
         </div>
+    <!--------------------------- 側邊欄位結束---------------------------------------->
 
-
+        <!--------------------------------中心欄位開始----------------------------------->
+        <!--根據文章數量產生卡片-->
         <div class="col-9">
           <div class="row g-3">
-            <div class="col-4">
-              <div class="card">
-                <img
-                  src="https://picsum.photos/300/200/?random=10"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">學習ＳＱＬ</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">查看此文章</a>
+            <ng-container *ngFor="let article of spe_aticle_list; let i = index">
+              <div class="col-4">
+                <div class="card">
+                  <img
+                    src="https://picsum.photos/300/200/?random=10"
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">{{article}}</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and make
+                      up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-primary"  (click)="button_test(article)">查看此文章</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-4">
-
-              <div class="card">
-                <img
-                  src="https://picsum.photos/300/200/?random=10"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">學習Angular</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">查看此文章</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card">
-                <img
-                  src="https://picsum.photos/300/200/?random=10"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">學習後端框架</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">查看此文章</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card">
-                <img
-                  src="https://picsum.photos/300/200/?random=10"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">學習串接API</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">查看此文章</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card">
-                <img
-                  src="https://picsum.photos/300/200/?random=10"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">學習測試API</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">查看此文章</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card">
-                <img
-                  src="https://picsum.photos/300/200/?random=10"
-                  class="card-img-top"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">學習使用POST MAN</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">查看此文章</a>
-                </div>
-              </div>
-            </div>
+            </ng-container>
 
 
           </div>
@@ -198,6 +125,8 @@
       </div>
     </div>
     <p></p>
+   <!--------------------------------中心欄位結束----------------------------------->
+   <!--------------------------------下方欄位開始----------------------------------->
 
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
@@ -208,5 +137,54 @@
         <li class="page-item"><a class="page-link" href="#">Next</a></li>
       </ul>
     </nav>
+<br>
+<!--文章內容區塊-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <div class="col-md-12 text-center">
+        <h3>此篇文章的內容</h3>
+      </div>
+            <div class="form-outline">
+              <textarea
+                class="form-control"
+                id="textAreaExample"
+                rows="15"
+                placeholder="請於卡片選擇你要預覽的文章"
+                type="text"
+                name="name"
+
+              >{{choose_article}}</textarea>
+
+            </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+</div>
+
+
+
+<!-- 文章列表-->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">順序</th>
+          <th scope="col">文章</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let article of spe_aticle_list; let i = index">
+          <tr>
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ article}}</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+   <!--------------------------------下方欄位結束----------------------------------->
+
+
   </body>
 </html>

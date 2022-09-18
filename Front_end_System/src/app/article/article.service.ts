@@ -6,6 +6,7 @@ import {
 import { Injectable } from '@angular/core';
 import { dataModel } from './data_model';
 import { environment } from 'src/environments/environment.prod';
+import {articleModel} from './article_model'
 
 import { Observable } from 'rxjs';
 @Injectable({
@@ -36,6 +37,17 @@ export class ArticleService {
 
   getMainData(): Observable<dataModel[]> {
     return this.http.get<dataModel[]>(this.mainURL);
+  }
+
+
+
+  gerArticle2(): Observable<articleModel[]> {
+    return this.http.get<articleModel[]>(this.minorURL);
+  }
+
+
+  gerArticle(id: number) {
+    return this.http.get(`http://127.0.0.1:8000/api/article2/${id=7}/`, this.options);
   }
 
 
