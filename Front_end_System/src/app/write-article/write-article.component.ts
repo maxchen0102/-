@@ -16,7 +16,12 @@ export class WriteArticleComponent implements OnInit {
   email = '';
   phone = '';
   id = 0;
-
+  month:any;
+  day:any;
+  year:any;
+  year_list=[2020,2021,2022,2023,2024]
+  month_lists=[1,2,3,4,5,6,7,8,9,10,11,12]
+  day_list=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
   selectedOptions: any; //select 選單的id
   article:string="";
 
@@ -42,59 +47,25 @@ export class WriteArticleComponent implements OnInit {
     this.id=0;
   }
 
-  //新增一筆資料
-  insertData(name: string, email: string, phone: string) {
-    console.log('新增資料中');
-    this.appService
-      .insertData({
-        name: name,
-        email: email,
-        phone:phone,
-      })
-      .subscribe((res) => {
-        this.getAllData();
-        this.reset();
-      });
+
+
+  public year_change(yearValue: any): void {
+    this.year = yearValue;
+    console.log(this.year); // should display the selected option.
   }
 
-  //更新一筆資料
-  editData(name: string, email: string, phone: string) {
-    console.log('更新中');
-    this.appService.updateData(
-      {
-        name: this.name,
-        email: this.email,
-        phone: this.phone,
-      },
-      this.id
-    ).subscribe(()=>{
-      this.getAllData()//更新修改夠的資料到網頁上
-      this.reset()
-    });
+
+
+  public month_change(monthValue: any): void {
+    this.month = monthValue;
+    console.log(this.month); // should display the selected option.
   }
 
-  //刪除一筆資料
-  deleteData(id: number) {
-    console.log('刪除資料中');
-    return this.appService.deleteData(id).subscribe((res) => {
-      console.log(res);
-      this.getAllData();
-    });
+  public day_change(day: any): void {
+    this.day = day;
+    console.log(this.day); // should display the selected option.
   }
 
-  showData(id: number, name: string, email: string, phone: string) {
-    console.log('顯示資料中');
-    console.log(id); //從列表中取得id 然後回傳
-
-    this.id = id;
-    this.name = name;
-    this.email = email;
-    this.phone = phone;
-  }
- mySelect(value:number){
-
-    console.log(value)
-  }
 
 
 
@@ -117,7 +88,7 @@ export class WriteArticleComponent implements OnInit {
 
     console.log(this.selectedOptions);
 
-    console.log(this.article);
+    console.log(this.article,"年：",this.year,"月:",this.month,"日:",this.day);
 
     this.appService
     .insertArticle({

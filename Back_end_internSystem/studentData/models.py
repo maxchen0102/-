@@ -7,7 +7,6 @@ from django.db import models
 class Data(models.Model):
     name = models.TextField()
     email = models.TextField()
-
     phone = models.TextField()
     
     class Meta:
