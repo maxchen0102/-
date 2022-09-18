@@ -24,6 +24,7 @@ export class WriteArticleComponent implements OnInit {
   day_list=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
   selectedOptions: any; //select 選單的id
   article:string="";
+  caption:string="";
 
 
   //initiate before the class initiate
@@ -88,7 +89,7 @@ export class WriteArticleComponent implements OnInit {
 
     console.log(this.selectedOptions);
 
-    console.log(this.article,"年：",this.year,"月:",this.month,"日:",this.day);
+    console.log("標題:",this.caption,"文章:",this.article,"年：",this.year,"月:",this.month,"日:",this.day);
 
     this.appService
     .insertArticle({
