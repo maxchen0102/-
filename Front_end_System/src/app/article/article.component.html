@@ -9,6 +9,7 @@
   <body>
     <app-nav-bar></app-nav-bar>
     <app-banner></app-banner>
+
 <!-- 輪播區塊-->
 <!--
   <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -29,9 +30,11 @@
 
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">實習生系統首頁 </a></li>
-        <li class="breadcrumb-item"><a href="#">使用者管理</a></li>
-        <li class="breadcrumb-item active" aria-current="page">文章管理系統</li>
+
+        <li class="breadcrumb-item"><a href="fillPage">使用者管理</a></li>
+        <li class="breadcrumb-item"><a href="article">文章總覽</a></li>
+
+
       </ol>
 
     </nav>
@@ -52,57 +55,7 @@
 
 
           <!--使用的欄位-->
-          <div>
-            <h4>使用的技術與工具比例</h4>
-            <h5>JAVA 10%</h5>
-            <div class="progress">
-              <div
-                class="progress-bar progress-bar-striped"
-                role="progressbar"
-                aria-label="Default striped example"
-                style="width: 10%"
-                aria-valuenow="10"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-            <h5>C# 25%</h5>
-            <div class="progress">
-              <div
-                class="progress-bar progress-bar-striped bg-success"
-                role="progressbar"
-                aria-label="Success striped example"
-                style="width: 25%"
-                aria-valuenow="25"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-            <h5>MySQL 50%</h5>
-            <div class="progress">
-              <div
-                class="progress-bar progress-bar-striped bg-info"
-                role="progressbar"
-                aria-label="Info striped example"
-                style="width: 50%"
-                aria-valuenow="50"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-            <h5>python 75%</h5>
-            <div class="progress">
-              <div
-                class="progress-bar progress-bar-striped bg-warning"
-                role="progressbar"
-                aria-label="Warning striped example"
-                style="width: 75%"
-                aria-valuenow="75"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              ></div>
-            </div>
-          </div>
+
           <p></p>
 
           <!--文章數量統計區塊-->
@@ -118,7 +71,7 @@
         <!--根據文章數量產生卡片-->
         <div class="col-9">
           <div class="row g-3">
-            <ng-container *ngFor="let article of spe_aticle_list; let i = index">
+            <ng-container *ngFor="let article of spe_caption_list; let i = index">
               <div class="col-4">
                 <div class="card">
                   <img
@@ -128,10 +81,12 @@
                   <div class="card-body">
                     <h5 class="card-title">{{article}}</h5>
                     <p class="card-text">
-                      Some quick example text to build on the card title and make
-                      up the bulk of the card's content.
+                      {{spe_aticle_list[i]}}
                     </p>
-                    <a href="#" class="btn btn-primary"  (click)="button_test(article)">查看此文章</a>
+                    <p class="card-text">
+                      {{day_list[i]}}
+                    </p>
+                    <a href="#" class="btn btn-primary"  (click)="button_test(spe_aticle_list[i])">查看此文章</a>
                   </div>
                 </div>
               </div>
@@ -183,24 +138,6 @@
 </div>
 
 
-
-<!-- 文章列表-->
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">順序</th>
-          <th scope="col">文章</th>
-        </tr>
-      </thead>
-      <tbody>
-        <ng-container *ngFor="let article of spe_aticle_list; let i = index">
-          <tr>
-            <th scope="row">{{ i + 1 }}</th>
-            <td>{{ article}}</td>
-          </tr>
-        </ng-container>
-      </tbody>
-    </table>
    <!--------------------------------下方欄位結束----------------------------------->
 
 

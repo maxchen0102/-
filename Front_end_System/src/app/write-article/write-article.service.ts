@@ -49,28 +49,6 @@ export class WriteArticleService {
     return this.http.get<dataModel[]>(this.mainURL); //why post ?
   }
 
-  //*新增一筆資料
-  //why is request
-  //呼叫此函式 會發送post
-  insertData(request: dataModel) {
-    return this.http.post(
-      this.mainURL,
-      request, // 我們給後端的request
-      this.options
-    );
-  }
-
-  //更新一筆資料
-  //update 在component 呼叫的時候要有兩個傳值， 一個是datamodel型態的修改後資料 以及修改值id
-  // 你可以選擇要更改的api的網址 ，這邊選data ，後端會根據他router 到指定的function
-  updateData(request: dataModel, id: number) {
-    return this.http.put(`http://127.0.0.1:8000/api/data/${id}/`,request , this.options);
-  }
-
-  //刪除一筆資料
-  deleteData(id: number) {
-    return this.http.delete(`http://127.0.0.1:8000/api/data/${id}/`, this.options);
-  }
 
 
 

@@ -94,7 +94,12 @@ export class WriteArticleComponent implements OnInit {
     this.appService
     .insertArticle({
       Original_id: this.selectedOptions,
-      article:this.article
+      article:this.article,
+      caption:this.caption,
+      year:this.year,
+      month:this.month,
+      day:this.day
+
     }).subscribe((res) => {
       this.getAllData();
       this.reset();

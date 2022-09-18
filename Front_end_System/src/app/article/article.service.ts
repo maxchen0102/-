@@ -46,9 +46,7 @@ export class ArticleService {
   }
 
 
-  gerArticle(id: number) {
-    return this.http.get(`http://127.0.0.1:8000/api/article2/${id=7}/`, this.options);
-  }
+
 
 
 
