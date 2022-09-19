@@ -9,36 +9,49 @@
         <span class="input-group-addon" id="sizing-addon1"
           ><i class="glyphicon glyphicon-user" aria-hidden="true"></i
         ></span>
-        <input
-          type="text"
-          class="form-control"
-          placeholder="使用者名稱"
-          aria-describedby="sizing-addon1"
-        />
+        <input autofocus placeholder="使用者名稱" type="text" name="name" class="form-control" id="inputname" [(ngModel)]="input_user_name" >
       </div>
       <div class="input-group input-group-md">
         <span class="input-group-addon" id="sizing-addon1"
           ><i class="glyphicon glyphicon-lock"></i
         ></span>
-        <input
-          type="password"
-          class="form-control"
-          placeholder="密碼"
-          aria-describedby="sizing-addon1"
-        />
+
+        <input  placeholder="密碼" type="text" name="name" class="form-control" id="inputPassword" [(ngModel)]="input_passwords" >
       </div>
       <div class="well well-sm" style="text-align: center">
         <input type="radio" name="kind" value="tea" /> 老師
         <input type="radio" name="kind" value="stu" /> 學生
       </div>
-      <button
-        type="submit"
-        class="btn btn-success btn-block"
-        routerLink="/fillPage"
-      >
-        登入
-      </button>
-    </div>
+      <br>
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-6">
+          <button
+          type="submit"
+          class="btn btn-success btn-block"
+          id="liveAlertBtn"
+
+          (click)="check(input_user_name,input_passwords)"
+          (click)="myFunction()"
+          routerLink={{p_router}}
+        >
+          登入
+        </button>
+
+          <button
+          type="submit"
+
+          class="btn btn-primary"
+          (click)="insertData(input_user_name,input_passwords)"
+          (click)="successful_insert()"
+        >
+          註冊
+        </button>
+        </div>
+        </div>
+        <div class="col-2"></div>
+      </div>
+
   </div>
   <div class="col-md-6">
     <h3>歡迎使用學生作業管理系統</h3>
@@ -50,5 +63,23 @@
         老師請使用<em>工號</em>登入，初始密碼為<em>6個1</em>，登入後請及時修改密碼
       </li>
     </ul>
+    <h3>{{welcome_message}}</h3>
+    <button
+          type="submit"
+          class="btn btn-success btn-block"
+          id="liveAlertBtn"
+
+
+          routerLink={{p_router}}
+        >
+          進入管理畫面
+        </button>
+
   </div>
 </div>
+
+
+
+<!--
+   routerLink="/fillPage"
+-->

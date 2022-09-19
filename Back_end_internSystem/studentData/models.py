@@ -35,5 +35,14 @@ class Article_3(models.Model):
     
     class Meta:
             db_table = "article_3" # 你資料表的名稱 
+            
+
+class Account(models.Model):
+    user_name=models.TextField(default="Empty")
+    password=models.TextField(default="Empty")
+    class Meta:
+            db_table = "Account" 
+    
+    
         
         

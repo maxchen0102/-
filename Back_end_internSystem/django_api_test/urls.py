@@ -17,12 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include 
 from rest_framework.routers import DefaultRouter
-from studentData.views import DataViewSet,Article2ViewSet
+from studentData.views import DataViewSet,Article2ViewSet,AccountViewSet
 
 router = DefaultRouter()
 router.register('data', DataViewSet)
 
 router.register('article2', Article2ViewSet)
+router.register('account', AccountViewSet)
+
 
 
 urlpatterns = [
