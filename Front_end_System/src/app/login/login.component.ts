@@ -22,6 +22,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAccount()
+    this.welcome_message="";
+    this.p_router="";
 
 
 
@@ -68,6 +70,7 @@ export class LoginComponent implements OnInit {
       if(user_name==this.account_lists[i].user_name){
         if(passwords==this.account_lists[i].password){
           this.bool=1
+
           break;
         }
 
@@ -81,6 +84,8 @@ export class LoginComponent implements OnInit {
     }
     else{
       this.message="帳號密碼輸入錯誤!請重新輸入!"
+      this.welcome_message="";
+      this.p_router="";
     }
 
 

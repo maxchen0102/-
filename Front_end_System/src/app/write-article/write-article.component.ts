@@ -108,6 +108,8 @@ export class WriteArticleComponent implements OnInit {
     console.log('新增文章完成');
     this.article="";
   }
-
+  submit_funciton() {
+    alert("成功新增一篇日誌！");
+  }
 
 }

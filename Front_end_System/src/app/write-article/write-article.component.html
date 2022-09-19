@@ -42,7 +42,7 @@
 
       </select>
       <h5>請選擇您的日期</h5>
-      <select [(ngModel)]="day" (ngModelChange)="month_change($event)" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+      <select [(ngModel)]="day" (ngModelChange)="day_change($event)" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
         <option [ngValue]="undefined" >日期 </option>
         <option *ngFor="let day of day_list" [ngValue]="day">{{day}}</option>
       </select>
@@ -78,7 +78,7 @@
           <label class="form-label" for="textAreaExample"></label>
 
           <div class="col-md-12 text-center">
-            <button type="button" class="btn btn-success" (click)="insertArticle()">繳交文章</button>
+            <button type="button" class="btn btn-success" (click)="insertArticle()" (click)="submit_funciton()">繳交文章</button>
 
         </div>
         </div>
