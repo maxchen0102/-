@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 
       for(let i=0;i<res.length;i++){
         this.account_lists.push(res[i]) ;
-        console.log("所有帳號密碼",this.account_lists[i])
+        //console.log("所有帳號密碼",this.account_lists[i])
       }
 
 
@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit {
       })
       .subscribe((res) => {
         this.reset();
+        this.getAccount()
         this.input_user_name="";
         this.input_passwords="";
       });
@@ -74,7 +75,7 @@ export class LoginComponent implements OnInit {
     }
     if(this.bool==1){
       this.message="歡迎 "+user_name+" 成功登入！"
-      this.welcome_message="歡迎"+user_name+"使用實習生日誌管理系統！請按下方按鈕進入管理畫面！"
+      this.welcome_message="歡迎! "+user_name+" 使用實習生日誌管理系統！請按下方按鈕進入管理畫面！"
       this.p_router="/fillPage"
       this.bool=0
     }

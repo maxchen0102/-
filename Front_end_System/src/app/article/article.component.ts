@@ -56,25 +56,19 @@ export class ArticleComponent implements OnInit {
 
       this.article_lists = res;
       console.log("所有文章數量:",this.article_lists.length)
-
-
-
-
-
-
        for(let i=0 ;i<this.article_lists.length;i++){
 
         if(this.article_lists[i].Original_id==this.selectedOptions){
           this.spe_aticle_list.push(this.article_lists[i].article);
           this.spe_caption_list.push(this.article_lists[i].caption);
           this.day=this.article_lists[i].year+"年"+this.article_lists[i].month+"月"+this.article_lists[i].day+"日"
-          console.log("此人的第一篇標題發文時間:",this.day);
+          //console.log("此人的第一篇標題發文時間:",this.day);
           this.day_list.push(this.day)
           this.day=""
-          console.log("刪除後的時間:",this.day);
+          //console.log("刪除後的時間:",this.day);
 
-          console.log("此人的第一篇標題:",this.spe_caption_list[0]);
-          console.log("此人的第一篇文章:",this.spe_aticle_list[0]);
+          //console.log("此人的第一篇標題:",this.spe_caption_list[0]);
+          //console.log("此人的第一篇文章:",this.spe_aticle_list[0]);
 
         }
 
@@ -85,8 +79,12 @@ export class ArticleComponent implements OnInit {
 
 
     });
-    this.spe_aticle_list=[]
+    this.spe_aticle_list=[] //要去做清除動作== 否則有bug
+    this.spe_caption_list=[]
+    this.article_lists=[]
   }
+
+
   button_test(article:any){
     this.choose_article=article
     console.log("button ok ",this.choose_article)
