@@ -35,7 +35,7 @@
 點選導覽列中的新增實習日誌，可以到達新增文章頁面。 
 左邊可以選擇實習生的姓名(已經登入的學生)，並選擇日期，然後即可輸入實習日誌內容。
 
-![](https://hackmd.io/_uploads/ByBudD6bp.png)
+![](https://github.com/maxchen0102/Student_management_system/blob/af42e53722c05b317ce6a0d3e6c8e8d2b78dc5c6/4.png)
 
 到文章總覽的地方，可以查看所有實習生的實習日誌。
 * 左邊可以選擇想要觀看的學生姓名，並且會統計此學生所寫的文章數量。
