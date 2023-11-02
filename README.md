@@ -28,7 +28,7 @@
 * 第三塊為目前的實習生名單列表，有基本的資料。
 
 
-![3.png](https://hackmd.io/_uploads/HkNUxyZ76.png)
+![](https://github.com/maxchen0102/Student_management_system/blob/20c9283ab03f8bb63bcfe894946afacc10528c33/3.png)
 
 
 
