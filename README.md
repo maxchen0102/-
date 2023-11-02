@@ -27,9 +27,7 @@
 * 第二塊為新增實習生資料區域，可以新增刪除修改學生資料。
 * 第三塊為目前的實習生名單列表，有基本的資料。
 
-![image.png](https://hackmd.io/_uploads/r1AURplmp.png)
-![image.png](https://hackmd.io/_uploads/r1AURplmp.png)
-
+![image](https://github.com/maxchen0102/Student_management_system/assets/62057890/81c4708d-7980-4a2b-ad29-852658cca54f)
 
 
 點選導覽列中的新增實習日誌，可以到達新增文章頁面。 
