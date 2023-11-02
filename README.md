@@ -27,7 +27,7 @@
 * 第二塊為新增實習生資料區域，可以新增刪除修改學生資料。
 * 第三塊為目前的實習生名單列表，有基本的資料。
 
-
+![image.png](https://hackmd.io/_uploads/r1AURplmp.png)
 ![image.png](https://hackmd.io/_uploads/r1AURplmp.png)
 
 
