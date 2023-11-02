@@ -27,7 +27,7 @@
 * 第二塊為新增實習生資料區域，可以新增刪除修改學生資料。
 * 第三塊為目前的實習生名單列表，有基本的資料。
 
-![image](https://github.com/maxchen0102/Student_management_system/blob/36f3fcc3b9a37754075d15d09685c9584f35fb84/%E6%88%AA%E5%9C%96%202023-11-02%20%E4%B8%8B%E5%8D%883.34.09.png) 
+![image](2.png) 
 
 
 
