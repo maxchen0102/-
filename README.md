@@ -36,7 +36,7 @@
 ![](https://imgur.com/a/1IPSSIC)
 
 
-![](https://i.imgur.com/x2F6ubW.png)
+![](https://imgur.com/a/1IPSSIC)
 
 到文章總覽的地方，可以查看所有實習生的實習日誌。
 * 左邊可以選擇想要觀看的學生姓名，並且會統計此學生所寫的文章數量。
