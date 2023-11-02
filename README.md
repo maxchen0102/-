@@ -27,22 +27,21 @@
 * 第二塊為新增實習生資料區域，可以新增刪除修改學生資料。
 * 第三塊為目前的實習生名單列表，有基本的資料。
 
-![](https://imgur.com/a/Ztesi19.png) 
+
+![3.png](https://hackmd.io/_uploads/HkNUxyZ76.png)
 
 
 
 點選導覽列中的新增實習日誌，可以到達新增文章頁面。 
 左邊可以選擇實習生的姓名(已經登入的學生)，並選擇日期，然後即可輸入實習日誌內容。
 
-
-
-![image](https://imgur.com/a/T918KBF)
+![](https://hackmd.io/_uploads/ByBudD6bp.png)
 
 到文章總覽的地方，可以查看所有實習生的實習日誌。
 * 左邊可以選擇想要觀看的學生姓名，並且會統計此學生所寫的文章數量。
 * 右邊即為學生寫的文章，以卡片方式呈現，且有時間日期方便查找，點擊查看此文章時，會在下方產生整篇文章內文，方便批改。
 
-![image](https://hackmd.io/_uploads/SyLyFD6-6.png)
+![](https://hackmd.io/_uploads/SyLyFD6-6.png)
 
 
 
