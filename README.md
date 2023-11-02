@@ -41,7 +41,7 @@
 * 左邊可以選擇想要觀看的學生姓名，並且會統計此學生所寫的文章數量。
 * 右邊即為學生寫的文章，以卡片方式呈現，且有時間日期方便查找，點擊查看此文章時，會在下方產生整篇文章內文，方便批改。
 
-![](https://hackmd.io/_uploads/SyLyFD6-6.png)
+![](https://github.com/maxchen0102/Student_management_system/blob/6d9ffc8bf13169b8c05b340387a47c5836933df8/5.png)
 
 
 
